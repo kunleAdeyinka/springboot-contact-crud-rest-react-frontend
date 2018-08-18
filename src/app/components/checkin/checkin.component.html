@@ -1,0 +1,59 @@
+<br><br><br>
+<h1>Review Reservation Details</h1>
+
+<br><br>
+<h2>Flight Details:</h2>
+<table class="table table-hover">
+  <tbody>
+    <tr class="table-primary">
+      <td>Airline</td>
+      <td> {{data?.flight?.operatingAirlines}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>From</td>
+      <td> {{data?.flight?.departureCity}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>To</td>
+      <td> {{data?.flight?.arrivalCity}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>Date of Departure</td>
+      <td> {{data?.flight?.dateOfDeparture}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>Departure Time</td>
+      <td> {{data?.flight?.estimatedDepartureTime}}</td>
+    </tr>
+  </tbody>
+ </table>
+<br><br>
+<h2>Passenger Details:</h2>
+<table class="table table-hover">
+  <tbody>
+    <tr class="table-primary">
+      <td>First Name</td>
+      <td> {{data?.passenger?.firstName}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>Last Name</td>
+      <td> {{data?.passenger?.lastName}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>Email</td>
+      <td> {{data?.passenger?.email}}</td>
+    </tr>
+    <tr class="table-primary">
+      <td>Phone Number</td>
+      <td> {{data?.passenger?.phone}}</td>
+    </tr>
+  </tbody>
+ </table>
+
+ <div class="input-group">
+  <input type="text" class="form-control" placeholder="Number of bags"
+         aria-label="Enter the number of bags to check in:" aria-describedby="button-addon4" [(ngModel)]="noOfBags">
+  <div class="input-group-append" id="button-addon4">
+    <button (click)="checkin(noOfBags)" class="btn btn-primary">Checkin</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<form>
+  <fieldset>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Reservation Number: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control-plaintext"  [(ngModel)]="reservationId" [ngModelOptions]="{standalone: true}" placeholder="Enter Reservation Number">
+      </div>
+    </div>
+  </fieldset>
+  <button (click)='onSelect(reservationId)' class="btn btn-primary">Next</button>
+</form>
